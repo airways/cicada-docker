@@ -10,4 +10,7 @@ This is a Dockerized version of https://github.com/little-brother/cicada
 
 ## Usage
 
-     docker run -p5000:5000 -p5001:5001 --env-file .env metasushi/cicada
+    echo "PORT=5000" > .env
+    echo "ADMIN_PASS=SomethingStronger2345" >> .env
+    echo "VIEW_PASS=SomethingStronger2345" >> .env
+    docker run -p5000:5000 -p5001:5001 --env-file .env metasushi/cicada
